@@ -10,8 +10,8 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                
-                    sh 'mvn clean compile'
+                    sh 'sudo rm -rf /root/.m2/repository'
+                    sh 'sudo mvn clean compile'
                 }
             
         }
