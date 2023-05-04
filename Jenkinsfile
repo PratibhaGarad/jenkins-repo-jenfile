@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        label {
+            label "node-1"
+            customWorkspace "/mnt/customnode-space"
+        }
+    }
 
     stages {
         stage ('Compile Stage') {
